@@ -16,6 +16,8 @@ logging.basicConfig(
 app = Flask(__name__)
 logger = logging.getLogger(__name__)
 
+LOG_FILE = "webhooks.log"
+
 @app.route("/webhook", methods=["POST"])
 def webhook():
     """Receives webhooks and saves to file"""
